@@ -10,11 +10,7 @@ main{
   height: 100%;
   
 }
-#footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+footer{
   grid-area: footer;
   border: solid black 2px;
   background-color: rgb(13, 202, 193);
@@ -35,25 +31,29 @@ main{
    grid-template-columns: auto auto auto;
    row-gap: 10px;
    column-gap: 10px;
-   height: 100vh;
+   height: 100%;
    margin: 0;} 
    .pr_medias{
     grid-area: medias;
     background-color: aliceblue;
     box-shadow: 5px 5px 50px whitesmoke;
-      border-radius: 5px;
-  }
+     border-radius: 5px;
+     height: 100%;
+    }
+
   .pr_boxer{
     grid-area: boxer;
     background-color: aliceblue;
     box-shadow: 5px 5px 50px whitesmoke;
       border-radius: 5px;
+      height: 100%;
   }
   .pr_conjuntos{
     grid-area: conjuntos;
     background-color: aliceblue;
     box-shadow: 5px 5px 50px whitesmoke;
       border-radius: 5px;
+      height: 100%;
   }
   #produ{
     color: black;
@@ -320,12 +320,13 @@ body{
   "main main main"
   "footer footer footer"
   ;
-grid-template-rows: 130px 100px 100% 1fr; 
+grid-template-rows: 130px 100px auto 1fr; 
 grid-template-columns: auto auto auto;
 row-gap: 10px;
 column-gap: 10px;
-height: 100vh;
+height: 100%;
 margin: 0;	 
 background-image: url(../Imagenes/Roma.jpg);
 background-repeat: no-repeat;
+background-attachment: fixed;
 }
