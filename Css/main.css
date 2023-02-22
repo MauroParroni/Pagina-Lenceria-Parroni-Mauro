@@ -1,0 +1,331 @@
+
+header{
+  grid-area: header;
+}
+nav{
+  grid-area: nav;
+}
+main{
+  grid-area: main;
+  height: 100%;
+  
+}
+#footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  grid-area: footer;
+  border: solid black 2px;
+  background-color: rgb(13, 202, 193);
+  border-radius: 14px;
+ 
+}
+.pr{ 
+  display: grid;
+  grid-template-areas:
+  "titulo titulo titulo" 
+  "medias medias medias"
+  "titulo2 titulo2 titulo2"
+  "boxer boxer boxer"
+  "titulo3 titulo3 titulo3"
+  "conjuntos conjuntos conjuntos"
+  ;
+   grid-template-rows:50px auto 50px auto 50px auto; 
+   grid-template-columns: auto auto auto;
+   row-gap: 10px;
+   column-gap: 10px;
+   height: 100vh;
+   margin: 0;} 
+   .pr_medias{
+    grid-area: medias;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 50px whitesmoke;
+      border-radius: 5px;
+  }
+  .pr_boxer{
+    grid-area: boxer;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 50px whitesmoke;
+      border-radius: 5px;
+  }
+  .pr_conjuntos{
+    grid-area: conjuntos;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 50px whitesmoke;
+      border-radius: 5px;
+  }
+  #produ{
+    color: black;
+  }
+  .pr_titulo{
+    grid-area: titulo;
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .pr_titulo2{
+    grid-area: titulo2;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .pr_titulo3{
+    grid-area: titulo3;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    }
+.tituloprincipal{
+    color: blueviolet ;
+    background-color: antiquewhite;
+    padding: 35px 10px 20px 10px;
+    margin: 5px 15px 5px 15px;
+    border: solid black 2px;
+    box-shadow: 5px 8px 10px blanchedalmond;
+    border-radius: 10px;
+    display: flex;
+}
+.novedades{
+ text-align: center;
+  font-size: xx-large;
+}
+.texto{
+  font-size: 33px;
+  background-color: antiquewhite;
+  border: solid black 2px;
+    box-shadow: 5px 8px 10px blanchedalmond;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nombre{
+  color:black;
+  font-size: x-large;
+}
+.recuadro{
+  background-color: darkgray;
+  border: solid black 2px;
+}  
+.tabla{
+  background-color: darkgray;
+  border: solid black 2px; 
+  margin: 20px;
+  right: initial;
+}
+.tabla2{
+  background-color: darkgray;
+  border: solid black 2px; 
+  margin: 20px;
+  right: initial;
+}
+.face{
+    width: 30px; 
+    height: 30px;
+}
+.insta{
+  width: 30px; 
+  height: 30px;
+}
+.icono{
+ text-align: end;
+}
+.indice{
+   font-style: oblique;
+  background-color: rgba(90, 235, 235, 0.836);
+  padding: 30px 40px 20px 40px;
+  border: solid whitesmoke 2px;
+    box-shadow: 5px 5px 50px whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+a{
+  color: rgb(27, 24, 24) !important;
+}
+.contenedor {
+    display: inline;
+    font-size: 23px;
+     } 
+.carrito{
+    width: 50px; 
+    height: 50px;
+}
+.Producto{
+  width: 100px;
+  height: 100px;
+}
+.tabla3{
+  background-color: darkgray;
+  border: solid black 2px; 
+ 
+  width: 500px;
+  height: auto;
+  top: 750px;
+  right: initial;
+  margin: 20px;
+}
+.butom{
+  margin: 20px;
+  top: 810px;
+  right: initial;
+  width: 90px;
+  height: 30px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.tabla4{
+  background-color: darkgray;
+  border: solid black 2px; 
+  right: initial;
+  margin: 20px;
+}
+.wsp{
+  width: 50px; 
+  height: 50px;
+}
+.px{font-size: x-large;}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sliderxd{
+  margin: auto;
+  width: 800px;
+  padding: 30px;
+}
+ul.nov{
+  position: relative;
+  right: -220px ;
+  height: 300px;
+}
+ul.nov li{
+  position:absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  transition: .5s;
+}
+ul.nov li img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+ul.nov li:first-child{
+  opacity: 1;
+}
+ul.nov li:target{
+  opacity: 1;
+}
+.menu {
+  text-align: center;
+  margin: 20px;
+}
+
+.menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: rebeccapurple;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 100%;}
+.nov_recuadro{ 
+  background-color: rgb(92, 194, 207);
+  border: solid black 2px;
+  box-shadow: 5px 5px 50px rgb(78, 173, 180);
+    border-radius: 10px;
+  } 
+  .indice li a {
+  text-decoration: none;
+  }
+  .indice li a:hover {
+    background-color: rgb(48, 180, 197);
+  }
+  .indice li ul{
+    display: none;
+    position: absolute;
+  }
+  .indice li:hover > ul {
+    display: block;
+  }
+  .indice > li {
+    float: left;
+  }
+  .submenu{
+    background-color: rgba(90, 235, 235, 0.836);
+  padding: 7px 20px 7px 20px;
+  border: solid whitesmoke 2px;
+    box-shadow: 5px 5px 50px whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+    }
+
+  .formulario{
+    border: solid rgb(22, 21, 21) 2px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 50px rgb(14, 13, 13);
+
+  }
+.Articulos{
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+}
+.carta{
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: aliceblue;
+  box-shadow: 5px 5px 50px rgb(14, 13, 13);
+}
+.carta img{
+  width: 100%;
+  height: 210px;
+}
+.carta .contenido{
+  padding: 15px;
+  text-align: center;
+}
+.carta .contenido p{
+  line-height: 1.5;
+  color: black;
+}
+.carta .contenido h3{
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.lol{
+  text-align: center;
+}
+.row{
+  align-items: center;
+}
+
+body{
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  "nav nav nav"
+  "main main main"
+  "footer footer footer"
+  ;
+grid-template-rows: 130px 100px 100% 1fr; 
+grid-template-columns: auto auto auto;
+row-gap: 10px;
+column-gap: 10px;
+height: 100vh;
+margin: 0;	 
+background-image: url(../Imagenes/Roma.jpg);
+background-repeat: no-repeat;
+}
