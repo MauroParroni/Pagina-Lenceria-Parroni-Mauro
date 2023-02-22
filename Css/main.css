@@ -7,8 +7,6 @@ nav{
 }
 main{
   grid-area: main;
-  height: 100%;
-  
 }
 footer{
   grid-area: footer;
@@ -116,12 +114,12 @@ footer{
   right: initial;
 }
 .face{
-    width: 30px; 
-    height: 30px;
+    width: 35px; 
+    height: 35px;
 }
 .insta{
-  width: 30px; 
-  height: 30px;
+  width: 35px; 
+  height: 35px;
 }
 .icono{
  text-align: end;
