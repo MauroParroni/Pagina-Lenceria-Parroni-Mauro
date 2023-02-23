@@ -11,7 +11,7 @@ main{
 footer{
   grid-area: footer;
   border: solid black 2px;
-  background-color: rgb(13, 202, 193);
+  background: linear-gradient(70deg, rgb(53, 39, 182), rgb(124, 137, 255));
   border-radius: 14px;
  
 }
@@ -126,8 +126,8 @@ footer{
 }
 .indice{
    font-style: oblique;
-  background-color: rgba(90, 235, 235, 0.836);
-  padding: 30px 40px 20px 40px;
+ background: linear-gradient(-90deg, rgb(81, 218, 223), rgb(234, 255, 254));
+   padding: 30px 40px 20px 40px;
   border: solid whitesmoke 2px;
     box-shadow: 5px 5px 50px whitesmoke;
     border-radius: 10px;
@@ -258,7 +258,7 @@ ul.nov li:target{
     float: left;
   }
   .submenu{
-    background-color: rgba(90, 235, 235, 0.836);
+ background: linear-gradient(-90deg, rgb(81, 218, 223), rgb(234, 255, 254));
   padding: 7px 20px 7px 20px;
   border: solid whitesmoke 2px;
     box-shadow: 5px 5px 50px whitesmoke;
