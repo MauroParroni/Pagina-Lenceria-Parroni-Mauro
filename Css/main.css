@@ -33,7 +33,7 @@ footer{
    margin: 0;} 
    .pr_medias{
     grid-area: medias;
-    background: linear-gradient(70deg, blue, pink);
+    background: linear-gradient(70deg, whitesmoke, pink);
     box-shadow: 5px 5px 50px whitesmoke;
      border-radius: 5px;
      height: 100%;
@@ -41,14 +41,14 @@ footer{
 
   .pr_boxer{
     grid-area: boxer;
-    background: linear-gradient(90deg, blue, pink);
+    background: linear-gradient(90deg, whitesmoke, pink);
     box-shadow: 5px 5px 50px whitesmoke;
       border-radius: 5px;
       height: 100%;
   }
   .pr_conjuntos{
     grid-area: conjuntos;
-    background: linear-gradient(70deg, blue, pink);
+    background: linear-gradient(70deg, whitesmoke, pink);
     box-shadow: 5px 5px 50px whitesmoke;
       border-radius: 5px;
       height: 100%;
@@ -73,7 +73,7 @@ footer{
     }
 .tituloprincipal{
     color: blueviolet ;
-    background-color: antiquewhite;
+    background: linear-gradient(70deg, pink,antiquewhite);
     padding: 35px 10px 20px 10px;
     margin: 5px 15px 5px 15px;
     border: solid black 2px;
