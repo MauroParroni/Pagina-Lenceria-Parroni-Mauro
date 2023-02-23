@@ -311,10 +311,6 @@ ul.nov li:target{
 .lol{
   text-align: center;
 }
-.row{
-  align-items: center;
-}
-
 body{
   display: grid;
   grid-template-areas: 
