@@ -280,12 +280,17 @@ ul.nov li:target{
   display: flex;
 }
 .carta{
+  cursor: default;
   width: 100%;
   margin: 20px;
   border-radius: 6px;
   overflow: hidden;
   background-color: aliceblue;
+  box-shadow: 1px 1px 20px rgb(14, 13, 13);
+}
+.carta:hover{
   box-shadow: 5px 5px 50px rgb(14, 13, 13);
+  transform: translate(10px, -3%);
 }
 .carta img{
   width: 100%;
