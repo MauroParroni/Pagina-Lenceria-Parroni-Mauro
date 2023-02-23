@@ -229,14 +229,14 @@ ul.nov li:target{
   display: inline-block;
   color: white;
   text-decoration: none;
-  background-color: rebeccapurple;
+  background-color: rgb(138, 219, 229);
   padding: 10px;
   width: 40px;
   height: 40px;
   font-size: 15px;
   border-radius: 100%;}
 .nov_recuadro{ 
-  background-color: rgb(92, 194, 207);
+  background-color: rgb(176, 195, 197);
   border: solid black 2px;
   box-shadow: 5px 5px 50px rgb(78, 173, 180);
     border-radius: 10px;
