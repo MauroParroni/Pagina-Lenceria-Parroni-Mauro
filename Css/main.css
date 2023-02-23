@@ -33,7 +33,7 @@ footer{
    margin: 0;} 
    .pr_medias{
     grid-area: medias;
-    background-color: aliceblue;
+    background: linear-gradient(70deg, blue, pink);
     box-shadow: 5px 5px 50px whitesmoke;
      border-radius: 5px;
      height: 100%;
@@ -41,14 +41,14 @@ footer{
 
   .pr_boxer{
     grid-area: boxer;
-    background-color: aliceblue;
+    background: linear-gradient(90deg, blue, pink);
     box-shadow: 5px 5px 50px whitesmoke;
       border-radius: 5px;
       height: 100%;
   }
   .pr_conjuntos{
     grid-area: conjuntos;
-    background-color: aliceblue;
+    background: linear-gradient(70deg, blue, pink);
     box-shadow: 5px 5px 50px whitesmoke;
       border-radius: 5px;
       height: 100%;
