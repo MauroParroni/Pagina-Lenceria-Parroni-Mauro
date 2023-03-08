@@ -43,15 +43,14 @@
   text-align: center;
 }
 .pr .pr_medias .Articulos .carta .contenido p {
+  font-size: x-large;
   line-height: 1.5;
   color: black;
 }
 .pr .pr_medias .Articulos .carta .contenido h3 {
   font-weight: 400;
   margin-bottom: 15px;
-}
-.pr .pr_medias .Articulos .lol {
-  text-align: center;
+  font-size: x-large;
 }
 .pr .pr_boxer {
   grid-area: boxer;
@@ -90,10 +89,12 @@
 .pr .pr_boxer .Articulos .carta .contenido p {
   line-height: 1.5;
   color: black;
+  font-size: x-large;
 }
 .pr .pr_boxer .Articulos .carta .contenido h3 {
   font-weight: 400;
   margin-bottom: 15px;
+  font-size: x-large;
 }
 .pr .pr_boxer .Articulos .lol {
   text-align: center;
@@ -133,10 +134,12 @@
   text-align: center;
 }
 .pr .pr_conjuntos .Articulos .carta .contenido p {
+  font-size: x-large;
   line-height: 1.5;
   color: black;
 }
 .pr .pr_conjuntos .Articulos .carta .contenido h3 {
+  font-size: x-large;
   font-weight: 400;
   margin-bottom: 15px;
 }
