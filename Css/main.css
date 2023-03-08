@@ -1,284 +1,26 @@
-
-header{
-  grid-area: header;
-}
-nav{
-  grid-area: nav;
-}
-main{
-  grid-area: main;
-}
-footer{
-  grid-area: footer;
-  border: solid black 2px;
-  background: linear-gradient(70deg, rgb(53, 39, 182), rgb(124, 137, 255));
-  border-radius: 14px;
- 
-}
-.pr{ 
+.pr {
   display: grid;
-  grid-template-areas:
-  "titulo titulo titulo" 
-  "medias medias medias"
-  "titulo2 titulo2 titulo2"
-  "boxer boxer boxer"
-  "titulo3 titulo3 titulo3"
-  "conjuntos conjuntos conjuntos"
-  ;
-   grid-template-rows:50px auto 50px auto 50px auto; 
-   grid-template-columns: auto auto auto;
-   row-gap: 10px;
-   column-gap: 10px;
-   height: 100%;
-   margin: 0;} 
-   .pr_medias{
-    grid-area: medias;
-    background: linear-gradient(70deg, whitesmoke, pink);
-    box-shadow: 5px 5px 50px whitesmoke;
-     border-radius: 5px;
-     height: 100%;
-    }
-
-  .pr_boxer{
-    grid-area: boxer;
-    background: linear-gradient(90deg, whitesmoke, pink);
-    box-shadow: 5px 5px 50px whitesmoke;
-      border-radius: 5px;
-      height: 100%;
-  }
-  .pr_conjuntos{
-    grid-area: conjuntos;
-    background: linear-gradient(70deg, whitesmoke, pink);
-    box-shadow: 5px 5px 50px whitesmoke;
-      border-radius: 5px;
-      height: 100%;
-  }
-  #produ{
-    color: black;
-  }
-  .pr_titulo{
-    grid-area: titulo;
-    text-align: center; 
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .pr_titulo2{
-    grid-area: titulo2;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .pr_titulo3{
-    grid-area: titulo3;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    }
-.tituloprincipal{
-    color: blueviolet ;
-    background: linear-gradient(70deg, pink,antiquewhite);
-    padding: 35px 10px 20px 10px;
-    margin: 5px 15px 5px 15px;
-    border: solid black 2px;
-    box-shadow: 5px 8px 10px blanchedalmond;
-    border-radius: 10px;
-    display: flex;
-}
-.novedades{
- text-align: center;
-  font-size: xx-large;
-}
-.texto{
-  font-size: 33px;
-  background-color: antiquewhite;
-  border: solid black 2px;
-    box-shadow: 5px 8px 10px blanchedalmond;
-    border-radius: 10px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.nombre{
-  color:black;
-  font-size: x-large;
-}
-.recuadro{
-  background-color: darkgray;
-  border: solid black 2px;
-}  
-.tabla{
-  background-color: darkgray;
-  border: solid black 2px; 
-  margin: 20px;
-  right: initial;
-}
-.tabla2{
-  background-color: darkgray;
-  border: solid black 2px; 
-  margin: 20px;
-  right: initial;
-}
-.face{
-    width: 35px; 
-    height: 35px;
-}
-.insta{
-  width: 35px; 
-  height: 35px;
-}
-.icono{
- text-align: end;
-}
-.indice{
-   font-style: oblique;
- background: linear-gradient(-90deg, rgb(81, 218, 223), rgb(234, 255, 254));
-   padding: 30px 40px 20px 40px;
-  border: solid whitesmoke 2px;
-    box-shadow: 5px 5px 50px whitesmoke;
-    border-radius: 10px;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-   
-}
-a{
-  color: rgb(27, 24, 24) !important;
-}
-.contenedor {
-    font-size: 23px;
-     } 
-.carrito{
-    width: 50px; 
-    height: 50px;
-}
-.Producto{
-  width: 100px;
-  height: 100px;
-}
-.tabla3{
-  background-color: darkgray;
-  border: solid black 2px; 
- 
-  width: 500px;
-  height: auto;
-  top: 750px;
-  right: initial;
-  margin: 20px;
-}
-.butom{
-  margin: 20px;
-  top: 810px;
-  right: initial;
-  width: 90px;
-  height: 30px;
-  font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
-}
-.tabla4{
-  background-color: darkgray;
-  border: solid black 2px; 
-  right: initial;
-  margin: 20px;
-}
-.wsp{
-  width: 50px; 
-  height: 50px;
-}
-.px{font-size: x-large;}
-
-ul, li{
+  grid-template-areas: "titulo titulo titulo" "medias medias medias" "titulo2 titulo2 titulo2" "boxer boxer boxer" "titulo3 titulo3 titulo3" "conjuntos conjuntos conjuntos";
+  grid-template-rows: 50px auto 50px auto 50px auto;
+  grid-template-columns: auto auto auto;
+  row-gap: 10px;
+  column-gap: 10px;
+  height: 100%;
   margin: 0;
-  padding: 0;
-  list-style: none;
 }
-.sliderxd{
-  margin: auto;
-  width: 800px;
-  padding: 30px;
+.pr .pr_medias {
+  grid-area: medias;
+  background: linear-gradient(70deg, whitesmoke, pink);
+  box-shadow: 5px 5px 50px whitesmoke;
+  border-radius: 5px;
+  height: 100%;
 }
-ul.nov{
-  position: relative;
-  right: -220px ;
-  height: 300px;
-}
-ul.nov li{
-  position:absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  width: inherit;
-  height: inherit;
-  transition: .5s;
-}
-ul.nov li img{
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-ul.nov li:first-child{
-  opacity: 1;
-}
-ul.nov li:target{
-  opacity: 1;
-}
-.menu {
-  text-align: center;
-  margin: 20px;
-}
-
-.menu li {
-  display: inline-block;
-  text-align: center;
-}
-
-.menu li a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  background-color: rgb(138, 219, 229);
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 15px;
-  border-radius: 100%;}
-.nov_recuadro{ 
-  background-color: rgb(176, 195, 197);
-  border: solid black 2px;
-  box-shadow: 5px 5px 50px rgb(78, 173, 180);
-    border-radius: 10px;
-  } 
-  .indice li a {
-  text-decoration: none;
-  }
-  .indice li a:hover {
-    background-color: rgb(48, 180, 197);
-  }
-  .indice li ul{
-    display: none;
-    position: absolute;
-  }
-  .indice li:hover > ul {
-    display: block;
-  }
-  .indice > li {
-    float: left;
-  }
-  .submenu{
- background: linear-gradient(-90deg, rgb(81, 218, 223), rgb(234, 255, 254));
-  padding: 7px 20px 7px 20px;
-  border: solid whitesmoke 2px;
-    box-shadow: 5px 5px 50px whitesmoke;
-    border-radius: 5px;
-    text-align: center;
-    }
-
-  .formulario{
-    border: solid rgb(22, 21, 21) 2px;
-    border-radius: 5px;
-    background-color: aliceblue;
-    box-shadow: 5px 5px 50px rgb(14, 13, 13);
-
-  }
-.Articulos{
+.pr .pr_medias .Articulos {
   width: 100%;
   max-width: 250px;
   display: flex;
 }
-.carta{
+.pr .pr_medias .Articulos .carta {
   cursor: default;
   width: 100%;
   margin: 20px;
@@ -287,44 +29,296 @@ ul.nov li:target{
   background-color: aliceblue;
   box-shadow: 1px 1px 20px rgb(14, 13, 13);
 }
-.carta:hover{
+.pr .pr_medias .Articulos .carta:hover {
   box-shadow: 5px 5px 50px rgb(14, 13, 13);
   transform: translate(10px, -3%);
+  transition: all 0.5s;
 }
-.carta img{
+.pr .pr_medias .Articulos .carta img {
   width: 100%;
   height: 210px;
 }
-.carta .contenido{
+.pr .pr_medias .Articulos .carta .contenido {
   padding: 15px;
   text-align: center;
 }
-.carta .contenido p{
+.pr .pr_medias .Articulos .carta .contenido p {
   line-height: 1.5;
   color: black;
 }
-.carta .contenido h3{
+.pr .pr_medias .Articulos .carta .contenido h3 {
   font-weight: 400;
   margin-bottom: 15px;
 }
-.lol{
+.pr .pr_medias .Articulos .lol {
   text-align: center;
 }
-body{
-  display: grid;
-  grid-template-areas: 
-  "header header header"
-  "nav nav nav"
-  "main main main"
-  "footer footer footer"
-  ;
-grid-template-rows: 130px 100px auto 1fr; 
-grid-template-columns: auto auto auto;
-row-gap: 10px;
-column-gap: 10px;
-height: 100%;
-margin: 0;	 
-background-image: url(../Imagenes/Roma.jpg);
-background-repeat: no-repeat;
-background-attachment: fixed;
+.pr .pr_boxer {
+  grid-area: boxer;
+  background: linear-gradient(90deg, whitesmoke, pink);
+  box-shadow: 5px 5px 50px whitesmoke;
+  border-radius: 5px;
+  height: 100%;
 }
+.pr .pr_boxer .Articulos {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+}
+.pr .pr_boxer .Articulos .carta {
+  cursor: default;
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: aliceblue;
+  box-shadow: 1px 1px 20px rgb(14, 13, 13);
+}
+.pr .pr_boxer .Articulos .carta:hover {
+  box-shadow: 5px 5px 50px rgb(14, 13, 13);
+  transform: translate(10px, -3%);
+  transition: all 0.5s;
+}
+.pr .pr_boxer .Articulos .carta img {
+  width: 100%;
+  height: 210px;
+}
+.pr .pr_boxer .Articulos .carta .contenido {
+  padding: 15px;
+  text-align: center;
+}
+.pr .pr_boxer .Articulos .carta .contenido p {
+  line-height: 1.5;
+  color: black;
+}
+.pr .pr_boxer .Articulos .carta .contenido h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.pr .pr_boxer .Articulos .lol {
+  text-align: center;
+}
+.pr .pr_conjuntos {
+  grid-area: conjuntos;
+  background: linear-gradient(70deg, whitesmoke, pink);
+  box-shadow: 5px 5px 50px whitesmoke;
+  border-radius: 5px;
+  height: 100%;
+}
+.pr .pr_conjuntos .Articulos {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+}
+.pr .pr_conjuntos .Articulos .carta {
+  cursor: default;
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: aliceblue;
+  box-shadow: 1px 1px 20px rgb(14, 13, 13);
+}
+.pr .pr_conjuntos .Articulos .carta:hover {
+  box-shadow: 5px 5px 50px rgb(14, 13, 13);
+  transform: translate(10px, -3%);
+  transition: all 0.5s;
+}
+.pr .pr_conjuntos .Articulos .carta img {
+  width: 100%;
+  height: 210px;
+}
+.pr .pr_conjuntos .Articulos .carta .contenido {
+  padding: 15px;
+  text-align: center;
+}
+.pr .pr_conjuntos .Articulos .carta .contenido p {
+  line-height: 1.5;
+  color: black;
+}
+.pr .pr_conjuntos .Articulos .carta .contenido h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.pr .pr_titulo {
+  grid-area: titulo;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.pr .pr_titulo #produ {
+  color: black;
+}
+.pr .pr_titulo2 {
+  grid-area: titulo2;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.pr .pr_titulo2 #produ {
+  color: black;
+}
+.pr .pr_titulo3 {
+  grid-area: titulo3;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.pr .pr_titulo3 #produ {
+  color: black;
+}
+
+.nombre {
+  color: black;
+  font-size: x-large;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
+ul li a:hover {
+  background-color: rgb(48, 180, 197);
+}
+ul .submenu {
+  background: linear-gradient(-90deg, rgb(81, 218, 223), rgb(234, 255, 254));
+  padding: 7px 20px 7px 20px;
+  border: solid whitesmoke 2px;
+  box-shadow: 5px 5px 50px whitesmoke;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.indice li ul {
+  display: none;
+  position: absolute;
+}
+.indice li:hover > ul {
+  display: block;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
+  grid-template-rows: 130px 100px auto 1fr;
+  grid-template-columns: auto auto auto;
+  row-gap: 10px;
+  column-gap: 10px;
+  height: 100%;
+  margin: 0;
+  background-image: url(../Imagenes/Roma.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body header {
+  grid-area: header;
+}
+body .tituloprincipal {
+  color: blueviolet;
+  background: linear-gradient(70deg, pink, antiquewhite);
+  padding: 35px 10px 20px 10px;
+  margin: 5px 15px 5px 15px;
+  border: solid black 2px;
+  box-shadow: 5px 8px 10px blanchedalmond;
+  border-radius: 10px;
+  display: flex;
+}
+body .tituloprincipal .face {
+  width: 35px;
+  height: 35px;
+}
+body .tituloprincipal .insta {
+  width: 35px;
+  height: 35px;
+}
+body .tituloprincipal .icono {
+  text-align: end;
+}
+body nav {
+  grid-area: nav;
+}
+body nav .indice {
+  font-style: oblique;
+  background: linear-gradient(-90deg, rgb(81, 218, 223), rgb(234, 255, 254));
+  padding: 30px 40px 20px 40px;
+  border: solid whitesmoke 2px;
+  box-shadow: 5px 5px 50px whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body nav .indice .contenedor {
+  font-size: 23px;
+}
+body nav .indice .icono {
+  text-align: end;
+}
+body nav .indice .carrito {
+  width: 50px;
+  height: 50px;
+}
+body nav .indice a {
+  color: rgb(27, 24, 24);
+}
+body main {
+  grid-area: main;
+  text-align: center;
+  font-size: xx-large;
+}
+@media only screen and (max-width: 300px) {
+  body main .novedades {
+    text-align: center;
+    font-size: large;
+  }
+}
+body main .texto {
+  font-size: 33px;
+  background-color: antiquewhite;
+  border: solid black 2px;
+  box-shadow: 5px 8px 10px blanchedalmond;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+body main .formulario {
+  border: solid rgb(22, 21, 21) 2px;
+  border-radius: 5px;
+  background-color: aliceblue;
+  box-shadow: 5px 5px 50px rgb(14, 13, 13);
+}
+body main .nov {
+  display: flex;
+  text-align: center;
+}
+body main .nov .Presentacion {
+  border: groove black 1px;
+  background: linear-gradient(70deg, pink, antiquewhite);
+}
+body main .nov .Presentacion a {
+  text-decoration: none;
+  color: black;
+}
+body main .nov .Presentacion:hover {
+  box-shadow: 5px 5px 50px rgb(14, 13, 13);
+  transform: scale(1.1, 1.1);
+  transition: all 1s;
+}
+body main .nov .Presentacion .nov_img {
+  width: 100%;
+  height: 100%;
+}
+body footer {
+  grid-area: footer;
+  border: solid black 2px;
+  background: linear-gradient(70deg, rgb(53, 39, 182), rgb(124, 137, 255));
+  border-radius: 14px;
+}
+body footer .wsp {
+  width: 50px;
+  height: 50px;
+}
+body footer .px {
+  font-size: x-large;
+}
+
+/*# sourceMappingURL=main.css.map */
