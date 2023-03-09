@@ -192,23 +192,12 @@ body header {
 body .tituloprincipal {
   color: blueviolet;
   background: linear-gradient(70deg, pink, antiquewhite);
-  padding: 35px 10px 20px 10px;
-  margin: 5px 15px 5px 15px;
+  padding: 35px 10px 10px 10px;
+  margin: 5px 10px 5px 10px;
   border: solid black 2px;
   box-shadow: 5px 8px 10px blanchedalmond;
   border-radius: 10px;
   display: flex;
-}
-body .tituloprincipal .face {
-  width: 35px;
-  height: 35px;
-}
-body .tituloprincipal .insta {
-  width: 35px;
-  height: 35px;
-}
-body .tituloprincipal .icono {
-  text-align: end;
 }
 body nav {
   grid-area: nav;
@@ -236,7 +225,7 @@ body main .texto .Somos {
 }
 body main .texto .video {
   width: auto;
-  height: auto;
+  height: 100%;
 }
 body main .formulario {
   border: solid rgb(22, 21, 21) 2px;
@@ -272,6 +261,14 @@ body footer {
   border-radius: 14px;
   text-align: center;
   align-items: center;
+}
+body footer .face {
+  width: 35px;
+  height: 35px;
+}
+body footer .insta {
+  width: 35px;
+  height: 35px;
 }
 body footer .mapa {
   width: 100%;
