@@ -176,7 +176,7 @@
 body {
   display: grid;
   grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
-  grid-template-rows: 130px 75px auto 1fr;
+  grid-template-rows: 130px auto auto 1fr;
   grid-template-columns: auto auto auto;
   row-gap: 10px;
   column-gap: 10px;
@@ -210,7 +210,7 @@ body main .novedades {
   font-size: xx-large;
 }
 body main .texto {
-  font-size: 33px;
+  font-size: 25px;
   background: linear-gradient(70deg, pink, antiquewhite);
   border: groove black 3px;
   box-shadow: 5px 8px 10px blanchedalmond;
@@ -222,10 +222,6 @@ body main .texto {
 }
 body main .texto .Somos {
   padding: 50px;
-}
-body main .texto .video {
-  width: auto;
-  height: 100%;
 }
 body main .formulario {
   border: solid rgb(22, 21, 21) 2px;

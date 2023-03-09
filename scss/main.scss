@@ -199,7 +199,7 @@ $h1Mobile: 1.2rem;
     "main main main"
     "footer footer footer"
     ;
-  grid-template-rows: 130px 75px auto 1fr; 
+  grid-template-rows: 130px auto auto 1fr; 
   grid-template-columns: auto auto auto;
   row-gap: 10px;
   column-gap: 10px;
@@ -234,7 +234,7 @@ $h1Mobile: 1.2rem;
                                           }
                                               
                                         .texto{
-                                                font-size: 33px;
+                                                font-size: 25px;
                                                 background: linear-gradient(70deg, pink,antiquewhite);
                                                 border: groove black 3px;
                                                   box-shadow: 5px 8px 10px blanchedalmond;
@@ -246,10 +246,7 @@ $h1Mobile: 1.2rem;
                                                   .Somos{
                                                     padding: 50px;
                                                   }                                       
-                                                  .video{
-                                                    width: auto;
-                                                    height: 100%;
-                                                  }
+                                                  
                                               } 
                                     .formulario{
                                                 border: solid rgb(22, 21, 21) 2px;
