@@ -199,7 +199,7 @@ $h1Mobile: 1.2rem;
     "main main main"
     "footer footer footer"
     ;
-  grid-template-rows: 130px auto auto 1fr; 
+  grid-template-rows: auto auto auto 1fr; 
   grid-template-columns: auto auto auto;
   row-gap: 10px;
   column-gap: 10px;
@@ -211,16 +211,7 @@ $h1Mobile: 1.2rem;
                               header{
                                      grid-area: header; 
                                     }
-                              .tituloprincipal{
-                                      color: blueviolet ;
-                                      background: linear-gradient(70deg, pink,antiquewhite);
-                                      padding: 35px 10px 10px 10px;
-                                      margin: 5px 10px 5px 10px;
-                                      border: solid black 2px;
-                                      box-shadow: 5px 8px 10px blanchedalmond;
-                                      border-radius: 10px;
-                                      display: flex;
-                                       }       
+                             
                               nav{
                                     grid-area: nav;
                                     }
@@ -231,6 +222,12 @@ $h1Mobile: 1.2rem;
                                              text-align: center;
                                                font-size: xx-large;
                                         
+                                          }
+                                          .xd{
+                                            max-width: 700px;
+                                            max-height: 500px;
+                                            height: 100%;
+                                            width: 100%;
                                           }
                                               
                                         .texto{

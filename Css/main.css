@@ -176,7 +176,7 @@
 body {
   display: grid;
   grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
-  grid-template-rows: 130px auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-template-columns: auto auto auto;
   row-gap: 10px;
   column-gap: 10px;
@@ -189,16 +189,6 @@ body {
 body header {
   grid-area: header;
 }
-body .tituloprincipal {
-  color: blueviolet;
-  background: linear-gradient(70deg, pink, antiquewhite);
-  padding: 35px 10px 10px 10px;
-  margin: 5px 10px 5px 10px;
-  border: solid black 2px;
-  box-shadow: 5px 8px 10px blanchedalmond;
-  border-radius: 10px;
-  display: flex;
-}
 body nav {
   grid-area: nav;
 }
@@ -208,6 +198,12 @@ body main {
 body main .novedades {
   text-align: center;
   font-size: xx-large;
+}
+body main .xd {
+  max-width: 700px;
+  max-height: 500px;
+  height: 100%;
+  width: 100%;
 }
 body main .texto {
   font-size: 25px;
