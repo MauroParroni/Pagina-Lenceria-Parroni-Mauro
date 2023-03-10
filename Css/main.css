@@ -216,9 +216,6 @@ body main .texto {
   justify-content: center;
   flex-wrap: wrap;
 }
-body main .texto .Somos {
-  padding: 50px;
-}
 body main .formulario {
   border: solid rgb(22, 21, 21) 2px;
   border-radius: 5px;
