@@ -1,6 +1,19 @@
+@import "extends-and-mixins";
 $vista:mobile;
 $h1Desktop: 3rem;
 $h1Mobile: 1.2rem;
+$Gradiente_Pagina:linear-gradient(70deg, whitesmoke, pink);
+$Gradiente_main:linear-gradient(70deg, pink,antiquewhite);
+$gradiente_Footer:linear-gradient(70deg, rgb(53, 39, 182), rgb(124, 137, 255));
+$TimeNewRoman:'Times New Roman', Times, serif;
+
+.titulinho{
+           text-align: center; 
+          font-family: $TimeNewRoman;
+                  #produ{
+                    color: black;
+                       }
+}
 
   .pr{ 
     display: grid;
@@ -20,170 +33,41 @@ $h1Mobile: 1.2rem;
      margin: 0;
                       .pr_medias{
                                  grid-area: medias;
-                                 background: linear-gradient(70deg, whitesmoke, pink);
-                                 box-shadow: 5px 5px 50px whitesmoke;
-                                 border-radius: 5px;
-                                 height: 100%;
+                                 background: $Gradiente_Pagina;
+                                 @include box-and-border;
                                          .Articulos{
-                                                     width: 100%;
-                                                     max-width: 250px;
-                                                     display: flex;
-                                
-                                                   .carta{
-                                                          cursor: default;
-                                                          width: 100%;
-                                                          margin: 20px;
-                                                          border-radius: 6px;
-                                                          overflow: hidden;
-                                                          background-color: aliceblue;
-                                                          box-shadow: 1px 1px 20px rgb(14, 13, 13);
-                                                          }
-                                                  .carta:hover{
-                                                          box-shadow: 5px 5px 50px rgb(14, 13, 13);
-                                                          transform: translate(10px, -3%);
-                                                          transition: all 0.5s;
-                                                         }
-                                                  .carta img{
-                                                         width: 100%;
-                                                         height: 210px;
-                                                        }
-                                                  .carta .contenido{
-                                                         padding: 15px;
-                                                         text-align: center;
-                                                        } 
-                                                  .carta .contenido p{
-                                                    font-size: x-large;
-                                                        line-height: 1.5;
-                                                         color: black;
-                                                        }
-                                                  .carta .contenido h3{
-                                                        font-weight: 400;
-                                                        margin-bottom: 15px;
-                                                        font-size: x-large;
-                                                       }
-                                                 
+                                                  @include articulos-productos;                                            
                                                     }
       
                                 }
                       .pr_boxer{
                                   grid-area: boxer;
-                                  background: linear-gradient(90deg, whitesmoke, pink);
-                                  box-shadow: 5px 5px 50px whitesmoke;
-                                    border-radius: 5px;
-                                    height: 100%;
+                                  background: $Gradiente_Pagina;
+                                  @include box-and-border;
                                                  
                                                  .Articulos{
-                                                     width: 100%;
-                                                     max-width: 250px;
-                                                     display: flex;
-                                                    .carta{
-                                                          cursor: default;
-                                                          width: 100%;
-                                                          margin: 20px;
-                                                          border-radius: 6px;
-                                                          overflow: hidden;
-                                                          background-color: aliceblue;
-                                                          box-shadow: 1px 1px 20px rgb(14, 13, 13);
-                                                          }
-                                                  .carta:hover{
-                                                          box-shadow: 5px 5px 50px rgb(14, 13, 13);
-                                                          transform: translate(10px, -3%);
-                                                          transition: all 0.5s;
-                                                         }
-                                                  .carta img{
-                                                         width: 100%;
-                                                         height: 210px;
-                                                        }
-                                                  .carta .contenido{
-                                                         padding: 15px;
-                                                         text-align: center;
-                                                        } 
-                                                  .carta .contenido p{
-                                                        line-height: 1.5;
-                                                         color: black;
-                                                         font-size: x-large;
-                                                        }
-                                                  .carta .contenido h3{
-                                                        font-weight: 400;
-                                                        margin-bottom: 15px;
-                                                        font-size: x-large;
-                                                       }
-                                                  .lol{
-                                                        text-align: center;
-                                                      }
+                                                  @include articulos-productos;
                                                     }
                                 } 
                   .pr_conjuntos{
                                   grid-area: conjuntos;
-                                  background: linear-gradient(70deg, whitesmoke, pink);
-                                  box-shadow: 5px 5px 50px whitesmoke;
-                                    border-radius: 5px;
-                                    height: 100%;
+                                  background: $Gradiente_Pagina;
+                                  @include box-and-border;
                                                 .Articulos{
-                                                           width: 100%;
-                                                           max-width: 250px;
-                                                           display: flex;
-                 
-                                                         .carta{
-                                                                 cursor:default;
-                                                                 width: 100%;
-                                                                 margin: 20px;
-                                                                 border-radius: 6px;
-                                                                 overflow: hidden;
-                                                                 background-color: aliceblue;
-                                                                 box-shadow: 1px 1px 20px rgb(14, 13, 13);
-                                                                 
-                                                                &:hover{
-                                                                 box-shadow: 5px 5px 50px rgb(14, 13, 13);
-                                                                transform: translate(10px, -3%);
-                                                                transition: all 0.5s;
-                                                                       }
-                                                                img{
-                                                                 width: 100%;
-                                                                 height: 210px;
-                                                                       }
-                                                               .contenido{
-                                                                           padding: 15px;
-                                                                           text-align: center;
-                                                                
-                                                                          p{
-                                                                            font-size: x-large;
-                                                                           line-height: 1.5;
-                                                                           color: black;
-                                                                           }
-                                                                         h3{
-                                                                          font-size: x-large;
-                                                                           font-weight: 400;
-                                                                           margin-bottom: 15px;
-                                                                           }
-                                                                         }
-                                                              
-                                                                 }
+                                                  @include articulos-productos;
                                                          }
                                 }    
                   .pr_titulo{
                                   grid-area: titulo;
-                                  text-align: center; 
-                                  font-family: 'Times New Roman', Times, serif;
-                                                  #produ{
-                                                  color: black;
-                                                        }
+                                  @extend .titulinho;
                                 }
                   .pr_titulo2{
                                   grid-area: titulo2;
-                                  text-align: center;
-                                  font-family: 'Times New Roman', Times, serif;
-                                                  #produ{
-                                                  color: black;
-                                                        }
+                                  @extend .titulinho;
                                 }
                   .pr_titulo3{
                                   grid-area: titulo3;
-                                  text-align: center;
-                                  font-family: 'Times New Roman', Times, serif;
-                                                   #produ{
-                                                          color: black;
-                                                         }
+                                  @extend .titulinho;
                                   }                   
     } 
  
@@ -232,7 +116,7 @@ $h1Mobile: 1.2rem;
                                               
                                         .texto{
                                                 font-size: 25px;
-                                                background: linear-gradient(70deg, pink,antiquewhite);
+                                                background: $Gradiente_main;
                                                 border: groove black 3px;
                                                   box-shadow: 5px 8px 10px blanchedalmond;
                                                   font-family: 'Times New Roman', Times, serif;
@@ -253,7 +137,7 @@ $h1Mobile: 1.2rem;
                                                 text-align: center;
                                     .Presentacion{
                                                 border: groove black 1px;
-                                                background: linear-gradient(70deg, pink,antiquewhite);
+                                                background: $Gradiente_main;
                                                 a{
                                                   text-decoration: none;
                                                   color: black;
@@ -273,7 +157,7 @@ $h1Mobile: 1.2rem;
                              footer{
                                     grid-area: footer;
                                     border: solid black 2px;
-                                    background: linear-gradient(70deg, rgb(53, 39, 182), rgb(124, 137, 255));
+                                    background: $gradiente_Footer;
                                     border-radius: 14px;
                                     text-align: center;
                                     align-items: center;
