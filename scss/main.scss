@@ -1,11 +1,5 @@
 @import "extends-and-mixins";
-$vista:mobile;
-$h1Desktop: 3rem;
-$h1Mobile: 1.2rem;
-$Gradiente_Pagina:linear-gradient(70deg, whitesmoke, pink);
-$Gradiente_main:linear-gradient(70deg, pink,antiquewhite);
-$gradiente_Footer:linear-gradient(70deg, rgb(53, 39, 182), rgb(124, 137, 255));
-$TimeNewRoman:'Times New Roman', Times, serif;
+@import "colors-and-font";
 
 .titulinho{
            text-align: center; 
