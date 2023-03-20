@@ -8,7 +8,9 @@
                     color: black;
                        }
 }
-
+.row{
+  --bs-gutter-x: 0;
+}
   .pr{ 
     display: grid;
     grid-template-areas:
@@ -29,6 +31,10 @@
                                  grid-area: medias;
                                  background: $Gradiente_Pagina;
                                  @include box-and-border;
+                                              .Centrado{
+                                                display: flex;
+                                                justify-content: center;
+                                                }
                                          .Articulos{
                                                   @include articulos-productos;                                            
                                                     }
@@ -38,19 +44,88 @@
                                   grid-area: boxer;
                                   background: $Gradiente_Pagina;
                                   @include box-and-border;
-                                                 
-                                                 .Articulos{
+                                  .Centrado{
+                                    display: flex;
+                                    justify-content: center;
+                                    }
+                                                .Articulos{
                                                   @include articulos-productos;
                                                     }
-                                } 
+                                }
                   .pr_conjuntos{
                                   grid-area: conjuntos;
                                   background: $Gradiente_Pagina;
+                                  .Centrado{
+                                    display: flex;
+                                    justify-content: center;
+                                    }
                                   @include box-and-border;
                                                 .Articulos{
                                                   @include articulos-productos;
                                                          }
-                                }    
+                                }
+            //Esto seria la parte de mobile//                   
+                                .boxer_Mobile{
+                                  background: $Gradiente_Pagina;
+                                  grid-area: boxer;
+                                 } 
+                                 .conjunto_Mobile{
+                                  background: $Gradiente_Pagina;
+                                  grid-area: conjuntos;
+                                 } 
+                                 .medias_Mobile{
+                                  background: $Gradiente_Pagina;
+                                  grid-area: medias;
+                                 } 
+                                 @media (min-width: 768px) {
+                                  .boxer_Mobile{
+                                        display: none;
+                                               }
+                                  .conjunto_Mobile{
+                                    display: none;
+                                  }
+                                  .medias_Mobile{
+                                    display: none;
+                                  }
+                                                  }
+                         @media (max-width: 768px) {
+                                  .pr_boxer{
+                                    display: none;
+                                          }
+                                  .pr_conjuntos{
+                                    display: none;
+                                  }
+                                  .pr_medias{
+                                    display: none;
+                                  }
+                                  .boxer_Mobile{
+                                        .Articulos{
+                                            display: flex;
+                                            justify-content: center;
+                                                 }
+                                                  .carta{
+                                                  width: 55%;
+                                                        }
+                                               }
+                                  .conjunto_Mobile{
+                                        .Articulos{
+                                            display: flex;
+                                            justify-content: center;
+                                                  }
+                                                  .carta{
+                                                  width: 55%;
+                                                       }
+                                               }
+                                  .medias_Mobile{
+                                        .Articulos{
+                                            display: flex;
+                                            justify-content: center;
+                                                  }
+                                                  .carta{
+                                                  width: 55%;
+                                                        }
+                                                 }      
+                                                  }  
                   .pr_titulo{
                                   grid-area: titulo;
                                   @extend .titulinho;
@@ -62,7 +137,9 @@
                   .pr_titulo3{
                                   grid-area: titulo3;
                                   @extend .titulinho;
-                                  }                   
+                                  } 
+ 
+                                                    
     } 
  
   .nombre{
@@ -77,7 +154,7 @@
     "main main main"
     "footer footer footer"
     ;
-  grid-template-rows: auto auto auto 1fr; 
+  grid-template-rows: auto auto auto auto; 
   grid-template-columns: auto auto auto;
   row-gap: 10px;
   column-gap: 10px;
@@ -152,7 +229,6 @@
                                     grid-area: footer;
                                     border: solid black 2px;
                                     background: $gradiente_Footer;
-                                    border-radius: 14px;
                                     text-align: center;
                                     align-items: center;
                                     .face{

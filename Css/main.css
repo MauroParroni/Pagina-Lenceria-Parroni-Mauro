@@ -39,6 +39,10 @@
   color: black;
 }
 
+.row {
+  --bs-gutter-x: 0;
+}
+
 .pr {
   display: grid;
   grid-template-areas: "titulo titulo titulo" "medias medias medias" "titulo2 titulo2 titulo2" "boxer boxer boxer" "titulo3 titulo3 titulo3" "conjuntos conjuntos conjuntos";
@@ -56,6 +60,10 @@
   border-radius: 5px;
   height: 100%;
 }
+.pr .pr_medias .Centrado {
+  display: flex;
+  justify-content: center;
+}
 .pr .pr_medias .Articulos {
   width: 100%;
   max-width: 250px;
@@ -67,6 +75,10 @@
   box-shadow: 5px 5px 50px whitesmoke;
   border-radius: 5px;
   height: 100%;
+}
+.pr .pr_boxer .Centrado {
+  display: flex;
+  justify-content: center;
 }
 .pr .pr_boxer .Articulos {
   width: 100%;
@@ -80,10 +92,69 @@
   border-radius: 5px;
   height: 100%;
 }
+.pr .pr_conjuntos .Centrado {
+  display: flex;
+  justify-content: center;
+}
 .pr .pr_conjuntos .Articulos {
   width: 100%;
   max-width: 250px;
   display: flex;
+}
+.pr .boxer_Mobile {
+  background: linear-gradient(70deg, whitesmoke, pink);
+  grid-area: boxer;
+}
+.pr .conjunto_Mobile {
+  background: linear-gradient(70deg, whitesmoke, pink);
+  grid-area: conjuntos;
+}
+.pr .medias_Mobile {
+  background: linear-gradient(70deg, whitesmoke, pink);
+  grid-area: medias;
+}
+@media (min-width: 768px) {
+  .pr .boxer_Mobile {
+    display: none;
+  }
+  .pr .conjunto_Mobile {
+    display: none;
+  }
+  .pr .medias_Mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .pr .pr_boxer {
+    display: none;
+  }
+  .pr .pr_conjuntos {
+    display: none;
+  }
+  .pr .pr_medias {
+    display: none;
+  }
+  .pr .boxer_Mobile .Articulos {
+    display: flex;
+    justify-content: center;
+  }
+  .pr .boxer_Mobile .carta {
+    width: 55%;
+  }
+  .pr .conjunto_Mobile .Articulos {
+    display: flex;
+    justify-content: center;
+  }
+  .pr .conjunto_Mobile .carta {
+    width: 55%;
+  }
+  .pr .medias_Mobile .Articulos {
+    display: flex;
+    justify-content: center;
+  }
+  .pr .medias_Mobile .carta {
+    width: 55%;
+  }
 }
 .pr .pr_titulo {
   grid-area: titulo;
@@ -103,7 +174,7 @@
 body {
   display: grid;
   grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-columns: auto auto auto;
   row-gap: 10px;
   column-gap: 10px;
@@ -174,7 +245,6 @@ body footer {
   grid-area: footer;
   border: solid black 2px;
   background: linear-gradient(70deg, rgb(53, 39, 182), rgb(124, 137, 255));
-  border-radius: 14px;
   text-align: center;
   align-items: center;
 }
