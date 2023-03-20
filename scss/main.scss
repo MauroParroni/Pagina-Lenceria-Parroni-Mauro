@@ -126,6 +126,7 @@
                                                         }
                                                  }      
                                                   }  
+                          //aca termina//
                   .pr_titulo{
                                   grid-area: titulo;
                                   @extend .titulinho;
@@ -223,8 +224,18 @@
                                                   height: 100%;
                                               }  
                                             }         
-                                    }        
+                                    } 
+                                    @media (min-width: 768px) {
+                                      .compra2{
+                                        display: none;
+                                      }
+                                    }
+                                    @media (max-width: 768px) {
+                                      .compra{
+                                        display: none;
+                                      }        
                                  }
+                                }
                              footer{
                                     grid-area: footer;
                                     border: solid black 2px;
