@@ -166,13 +166,27 @@
   background-attachment: fixed;
                               header{
                                      grid-area: header; 
+                                     background:$Gradiente_main;
                                     }
                              
                               nav{
                                     grid-area: nav;
+                                    background: linear-gradient(70deg,rgb(255, 99, 125), rgb(255, 231, 199));
+                                       .navbar-brand{
+                                         color: black;
+                                       }
+                                       .nav-link{
+                                        color: black;
+                                       }
+                                       .dropdown-menu{
+                                        background: linear-gradient(70deg,rgb(255, 99, 125), rgb(255, 231, 199));
+                                       }
                                     }
                              main{
                                     grid-area: main;
+                                    .carrusel{
+                                      background: $gradiente_slider;
+                                    }
                                     .novedades{
                                      
                                              text-align: center;
