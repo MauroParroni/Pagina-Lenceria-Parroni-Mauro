@@ -160,13 +160,17 @@
   row-gap: 10px;
   column-gap: 10px;
   height: 100%;
-  margin: 0;	 
+  margin: 0;
   background-image: url(../Imagenes/Roma.jpg);
+  background-size: cover;	 
   background-repeat: no-repeat;
   background-attachment: fixed;
                               header{
                                      grid-area: header; 
                                      background:$Gradiente_main;
+                                      .logxd{
+                                        text-decoration: none;
+                                      }
                                     }
                              
                               nav{
@@ -184,6 +188,9 @@
                                     }
                              main{
                                     grid-area: main;
+                                    .loguear{
+                                      border:groove black 1px;
+                                    }
                                     .carrusel{
                                       background: $gradiente_slider;
                                     }
@@ -276,4 +283,3 @@
                                     
                                   }
   }
- 
