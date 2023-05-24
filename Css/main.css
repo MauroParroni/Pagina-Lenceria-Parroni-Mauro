@@ -1,3 +1,12 @@
+.panel{
+  margin: 10px;
+  padding: 10px;
+}
+.panel2{
+  border: groove 4px rgb(218, 151, 151);
+  background: linear-gradient(70deg, whitesmoke, pink);
+  box-shadow: 5px 5px 10px pink;
+}
 .carta {
   cursor: default;
   width: 100%;
