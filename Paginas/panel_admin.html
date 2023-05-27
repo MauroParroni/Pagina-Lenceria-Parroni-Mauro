@@ -17,45 +17,42 @@
         </header> 
   <main>
     <div class="container"><br>
-        <form class="row g-3 panel2">
-          <h1 style="text-align:center;" class="panel">Cargar Producto</h1>
-            <div class="col-md-5 panel">
-              <label for="inputEmail4" class="form-label">Ingrese Nombre del Producto</label>
-              <input type="text" class="form-control" id="nombreProducto">
-            </div>  
-            <div class="col-2 panel">
-              <label for="inputAddress2" class="form-label">Precio</label>
-              <input type="text" class="form-control" id="precioProducto" placeholder="Precio del producto" min="0" max="10000">
-            </div>
-            <div class="col-2 panel">
-              <label for="inputAddress2" class="form-label">Stock</label>
-              <input type="text" class="form-control" id="stock" placeholder="stock" min="0" max="100">
-            </div>
-            <div class="col-md-2 panel">
-                <label for="inputAddress2" class="form-label">Tipo</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Tipo de producto</option>
-                    <option value="medias">Medias</option>
-                    <option value="boxers">Boxers</option>
-                    <option value="conjuntos">Conjuntos</option>
-                    <option value="otros">Otros</option>
-                  </select>
-              </select>
-            </div>
-            <div class="mb-3 col-md-5 panel">
-                <label for="formFile" class="form-label">Sube la imagen del producto</label>
-                <input class="form-control" type="file" id="imagenProducto">
-              </div>
-            <div class="col-12 panel" style="text-align: center;">
-              <button type="submit" class="btn btn-primary">Subir</button>
-            </div>
-          </form>
+      <form class="row g-3 panel2">
+        <h1 style="text-align:center;" class="panel">Cargar Producto</h1>
+        <div class="col-md-5 panel">
+          <label for="nombreProducto" class="form-label">Ingrese Nombre del Producto</label>
+          <input type="text" class="form-control" id="nombreProducto" placeholder="Nombre del Producto" title="Ingrese el nombre del producto">
+        </div>  
+        <div class="col-2 panel">
+          <label for="precioProducto" class="form-label">Precio</label>
+          <input type="text" class="form-control" id="precioProducto" placeholder="Precio del producto" min="0" max="10000" title="Ingrese el precio del producto">
         </div>
-
+        <div class="col-2 panel">
+          <label for="stock" class="form-label">Stock</label>
+          <input type="text" class="form-control" id="stock" placeholder="Stock" min="0" max="100" title="Ingrese el stock del producto">
+        </div>
+        <div class="col-md-2 panel">
+          <label for="tipoProducto" class="form-label">Tipo</label>
+          <select class="form-select" id="tipoProducto" title="Seleccione el tipo de producto">
+            <option selected disabled>Tipo de producto</option>
+            <option value="medias">Medias</option>
+            <option value="boxers">Boxers</option>
+            <option value="conjuntos">Conjuntos</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+        <div class="mb-3 col-md-5 panel">
+          <label for="imagenProducto" class="form-label">Sube la imagen del producto</label>
+          <input class="form-control" type="file" id="imagenProducto" title="Seleccione la imagen del producto">
+        </div>
+        <div class="col-12 panel" style="text-align: center;">
+          <button type="submit" class="btn btn-primary">Subir</button>
+        </div>
+      </form>     
   </main>
     
 
 
-
+  <script src="../main.js"></script>
 </body>
 </html>

@@ -20,6 +20,7 @@ class admin {
     } 
     if (localStorage.getItem("isLoggedIn") === "true") {// y aca hago desaparecer el boton de login y hago aparecer el panel de admin
         let boton = document.getElementById("booot");
+        if (boton){
         boton.style.display = "none";
         let header = document.getElementById("header");
         header.innerHTML = '<h1 class="col-md-11">Roma Lenceria</h1>' +
@@ -29,4 +30,74 @@ class admin {
                            '</a>' +
                            '</button>';
       }
+    }
+    class Producto {
+      constructor(nombre, precio, stock, tipo, imagen) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+        this.tipo = tipo;
+        this.imagen = imagen;
+      }
+    }
+    
+    const productos = JSON.parse(localStorage.getItem("productos")) || []; //verifico si ya hay algo guardado en el localstorage
+    
+    const cargarProducto = document.querySelector(".panel2");
+    cargarProducto?.addEventListener("submit", (e) => { //utilizo el ? para verificar si existe cargar producto en el HTML
+      e.preventDefault();
+      console.log("Formulario enviado");
+      const nombre = document.querySelector("#nombreProducto").value;
+      const precio = document.querySelector("#precioProducto").value;
+      const stock = document.querySelector("#stock").value;
+      const tipoSelect = document.querySelector("#tipoProducto");
+      const tipo = tipoSelect.value;
+      const imagenProducto = document.querySelector("#imagenProducto").files[0];// uso la propiedad file con indice 0 para conseguir el primer archivo de la lista
+    
+      const reader = new FileReader(); //aca se lee el contenido del archivo y lo transforma en una URL para poder mostrar el producto
+    
+      reader.addEventListener("load", () => {
+        const imagenURL = reader.result; // una vez transformada en url lo guardo en la variable imagenurl para crear un nuevo producto
+        const nuevoProducto = new Producto(nombre, precio, stock, tipo, imagenURL);
+    
+        productos.push(nuevoProducto);
+        localStorage.setItem("productos", JSON.stringify(productos));//guardo los productos en el localstorage en forma de json porque es un objeto
+        console.log(nuevoProducto);
+        cargarProducto.reset();
+        mostrarProductos();
+      });
+    
+      if (imagenProducto) {
+        reader.readAsDataURL(imagenProducto);
+      }
+    });
+    
+    const mostrarProductos = () => {
+      const tablaProductos = document.querySelector(".productos");
+      if (tablaProductos) {// muestro instancias del producto en la clase .producto
+        tablaProductos.innerHTML = "";
+        productos.forEach(nuevoProducto => {
+          tablaProductos.innerHTML += `
+            <div class="col-md-3 Centrado">
+              <div class="Articulos">
+                <div class="carta">
+                  <figure>
+                    <img src="${nuevoProducto.imagen}" alt="Imagen de producto">
+                  </figure>
+                  <div class="contenido">
+                    <h3>${nuevoProducto.nombre}</h3>
+                    <p>${nuevoProducto.precio}$</p>
+                    <button type="submit" class="btn btn-outline-dark">Comprar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+    };
+    
+    mostrarProductos();
+
+
       
