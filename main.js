@@ -25,7 +25,7 @@ class admin {
         let header = document.getElementById("header");
         header.innerHTML = '<h1 class="col-md-11">Roma Lenceria</h1>' +
                            '<button type="button" class="btn btn-danger col-md-1" id="adm">' +
-                           '<a href="/Paginas/panel_admin.html" class="link-light logxd">' +
+                           '<a href="./Paginas/panel_admin.html" class="link-light logxd">' +
                            'Panel Admin' +
                            '</a>' +
                            '</button>';
