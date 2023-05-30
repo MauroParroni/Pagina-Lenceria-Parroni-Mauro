@@ -145,7 +145,12 @@ body nav {
 body nav h1 {
   display: none;
 }
-@media (max-width: 767.98px) {
+body nav .botonSalir {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+@media (max-width: 800.98px) {
   body nav h1 {
     display: block;
     color: black !important;
@@ -206,6 +211,9 @@ body nav .dropdown-menu {
 }
 body main {
   grid-area: main;
+}
+body main .novedades {
+  text-align: center;
 }
 body main .panel {
   margin: 10px;

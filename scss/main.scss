@@ -117,7 +117,12 @@
                                     h1{
                                       display: none;
                                     }
-                                    @media (max-width: 767.98px) {
+                                    .botonSalir{
+                                      display: flex;
+                                      text-align: center;
+                                      align-items: center;
+                                    }
+                                    @media (max-width: 800.98px) {
                                       h1{
                                         display: block;
                                         color: black !important; 
@@ -179,6 +184,9 @@
                                        }
                                     }
                              main{
+                                  .novedades{
+                                    text-align: center;
+                                  }
                                   .panel{
                                         margin: 10px;
                                         padding: 10px;
