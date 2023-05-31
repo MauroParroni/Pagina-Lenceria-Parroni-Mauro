@@ -17,13 +17,12 @@ class admin {
           localStorage.setItem("isLoggedIn", "true");
         }
       });
-    } 
-    let url = "../Paginas/panel_admin.html"
-    console.log( window.location.href);
-    if (window.location.pathname === "/index.html"){
-      url = "./Paginas/panel_admin.html"
-    }
+    }   
     if (localStorage.getItem("isLoggedIn") === "true") {// y aca hago desaparecer el boton de login y hago aparecer el panel de admin
+      let url = "../Paginas/panel_admin.html"
+      if (document.querySelector("#index")){
+        url = "./Paginas/panel_admin.html"
+      }
         let boton = document.getElementById("booot");
         if (boton){
         boton.style.display = "none";
