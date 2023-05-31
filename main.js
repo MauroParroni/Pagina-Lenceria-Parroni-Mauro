@@ -19,7 +19,7 @@ class admin {
       });
     } 
     let url = "../Paginas/panel_admin.html"
-    console.log( window.location.href);
+    console.log( window.location.href,"funciono");
     if (window.location.pathname === "/index.html"){
       url = "./Paginas/panel_admin.html"
     }
