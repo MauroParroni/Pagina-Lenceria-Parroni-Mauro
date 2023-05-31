@@ -17,7 +17,7 @@ class admin {
           localStorage.setItem("isLoggedIn", "true");
         }
       });
-
+    }  
     if (localStorage.getItem("isLoggedIn") === "true") {// y aca hago desaparecer el boton de login y hago aparecer el panel de admin
       let url = "../Paginas/panel_admin.html"
       if (document.querySelector("#index")){
@@ -104,4 +104,4 @@ class admin {
     mostrarProductos();
 
 
-  }  
+  
