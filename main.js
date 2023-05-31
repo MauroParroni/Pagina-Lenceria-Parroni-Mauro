@@ -18,6 +18,11 @@ class admin {
         }
       });
     } 
+    let url = "../Paginas/panel_admin.html"
+    console.log( window.location.pathname);
+    if (window.location.pathname === "/index.html"){
+      url = "./Paginas/panel_admin.html"
+    }
     if (localStorage.getItem("isLoggedIn") === "true") {// y aca hago desaparecer el boton de login y hago aparecer el panel de admin
         let boton = document.getElementById("booot");
         if (boton){
@@ -25,7 +30,7 @@ class admin {
         let header = document.getElementById("header");
         header.innerHTML = '<h1 class="col-md-11">Roma Lenceria</h1>' +
                            '<button type="button" class="btn btn-danger col-md-1" id="adm">' +
-                           '<a href="../Paginas/panel_admin.html" class="link-light logxd">' +
+                           `<a href=${url} class="link-light logxd">` +
                            'Panel Admin' +
                            '</a>' +
                            '</button>';
@@ -86,7 +91,7 @@ class admin {
                   </figure>
                   <div class="contenido">
                     <h3>${nuevoProducto.nombre}</h3>
-                    <p>${nuevoProducto.precio}$</p>
+                    <p>${nuevoProducto.precio}</p>
                     <button type="submit" class="btn btn-outline-dark">Comprar</button>
                   </div>
                 </div>
