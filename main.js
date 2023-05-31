@@ -68,7 +68,11 @@ class admin {
         localStorage.setItem("productos", JSON.stringify(productos));//guardo los productos en el localstorage en forma de json porque es un objeto
         console.log(nuevoProducto);
         cargarProducto.reset();
-        mostrarProductos();
+        const happy= document.querySelector(".happy"); //algo random
+        happy.innerHTML+=`<h3>Felicidades subiste un producto</h3>
+        <img src="../Imagenes/happy.gif" alt="" ></img>
+        `;
+
       });
     
       if (imagenProducto) {
@@ -96,7 +100,7 @@ class admin {
                 </div>
               </div>
             </div>
-          `;
+            `;
         });
       }
     };

@@ -212,6 +212,12 @@ body nav .dropdown-menu {
 body main {
   grid-area: main;
 }
+body main .happy {
+  text-align: center;
+}
+body main .happy .gif {
+  animation-duration: 3s;
+}
 body main .novedades {
   text-align: center;
 }
