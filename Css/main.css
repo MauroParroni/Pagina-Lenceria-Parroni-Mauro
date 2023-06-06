@@ -28,7 +28,14 @@
 .carta .contenido h3 {
   font-size: x-large;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.carta .contenido h6 {
+  color: red;
+}
+.carta .contenido .cant {
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .row {
@@ -138,6 +145,15 @@ body header {
 body header .logxd {
   text-decoration: none;
 }
+body header .home {
+  text-align: end;
+  text-decoration: none;
+  color: #343a40;
+}
+body header .home:hover {
+  transform: translate(-10px, -20%);
+  transition: all 0.5s;
+}
 body nav {
   grid-area: nav;
   background: linear-gradient(70deg, rgb(255, 99, 125), rgb(255, 231, 199));
@@ -150,7 +166,7 @@ body nav .botonSalir {
   text-align: center;
   align-items: center;
 }
-@media (max-width: 800.98px) {
+@media (max-width: 991px) {
   body nav h1 {
     display: block;
     color: black !important;

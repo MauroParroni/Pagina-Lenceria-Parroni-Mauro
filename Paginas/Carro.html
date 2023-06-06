@@ -12,6 +12,9 @@
     <link rel="shortcut icon" href="../Imagenes/descarga.jpg">
     <link rel="stylesheet" href="../Css/normalize.css">
     <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
+
 </head>
 <body class="cuerpo">
   <header class="navbar text-bg-info p-3" data-bs-theme="dark" id="header">
@@ -70,50 +73,25 @@
             <th scope="col">Producto</th>
             <th scope="col">Descripcion</th>
             <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
             <th scope="col">#</th>
           </tr>
         </thead>
-        <tbody>
-          <tr class="table-active">
-            <tr>
-              <th scope="row">1</th>
-              <td>
-                <img src="../Imagenes/boxer1.jpg" alt="Imagen de Boxer" class="img-fluid img-thumbnail">
-              </td>
-              <td>
-               <p class="fs-6"> Boxer Lody Version Argentina</p>
-              </td>
-              <td>2600$</td>
-              <td>
-                <button type="button" class="btn-close " aria-label="Close"></button>
-              </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-              <td>
-                <img src="../Imagenes/conjunto2.jpg" alt="Imagen de conjunto" class="img-fluid img-thumbnail">
-              </td>
-              <td>
-                <p class="fs-6"> Conjunto</p>
-              </td>
-              <td>2100</td>
-              <td>
-                <button type="button" class="btn-close btn-sm" aria-label="Close"></button>
-              </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2" class="table-active">TOTAL</td>
-            <td>4700$</td>
-            <td>
-              <div class="d-grid gap-2">
-                <button class="btn btn-success btn-sm compra" type="button">Comprar</button>
-              </div>
-            </td>
-          </tr>
+        <tbody id="carrote">
+            
         </tbody>
+        <tr>
+          <th scope="row">#</th>
+          <td colspan="3" class="table-active">TOTAL</td>
+          <td id="total"></td>
+          <td>
+            <div class="d-grid gap-2">
+              <button class="btn btn-success btn-sm compra" type="button">Comprar</button>
+            </div>
+          </td>
+        </tr>
       </table>
-      <button class="btn btn-success btn-sm compra2" type="button">Comprar</button>
+      <button class="btn btn-success btn-sm compra2" type="button" id="botonComprar">Comprar</button>
     </div>
    
     </main>
@@ -142,6 +120,9 @@
             <p class="px"><img src="../Imagenes/email.png" alt="imagenemail" class="wsp">mauro_rp_11@live.com.ar</p>
         </div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
         <script src="../main.js"></script>
+
 </body>
 </html>

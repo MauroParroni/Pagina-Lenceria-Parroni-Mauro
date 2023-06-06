@@ -10,11 +10,16 @@
     <link rel="shortcut icon" href="../Imagenes/descarga.jpg">
     <link rel="stylesheet" href="../Css/normalize.css">
     <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
+
 </head>
 <body>
-  <header class="navbar text-bg-info p-3" data-bs-theme="dark">
-    <h1>Panel Administrador</h1>
-        </header> 
+  <header class="navbar text-bg-info p-3 row" data-bs-theme="dark">
+    <h1 class="col-md-6 col-sm-5 ">Panel Administrador</h1>
+    <a href="../index.html" class="col-md-6 col-sm-7 home">Ir al Home</a>
+
+        </header>
   <main>
     <div class="container"><br>
       <form class="row g-3 panel2">
@@ -26,10 +31,12 @@
         <div class="col-2 panel">
           <label for="precioProducto" class="form-label">Precio</label>
           <input type="text" class="form-control" id="precioProducto" placeholder="Precio del producto" min="0" max="10000" title="Ingrese el precio del producto">
+          <span id="errorPrecio" style="color: red; display: none;"></span>
         </div>
         <div class="col-2 panel">
           <label for="stock" class="form-label">Stock</label>
           <input type="text" class="form-control" id="stock" placeholder="Stock" min="0" max="100" title="Ingrese el stock del producto">
+          <span id="errorStock" style="color: red; display: none;"></span>
         </div>
         <div class="col-md-2 panel">
           <label for="tipoProducto" class="form-label">Tipo</label>
@@ -56,6 +63,9 @@
     
 
 
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
   <script src="../main.js"></script>
+
 </body>
 </html>
