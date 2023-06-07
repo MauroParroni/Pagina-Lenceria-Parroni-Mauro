@@ -107,33 +107,36 @@ class admin {
       
       const mostrarProductos = () => {
         const tablaProductos = document.querySelector(".productos");
-        if (tablaProductos) {// muestro instancias del producto en la clase .producto
+        if (tablaProductos) {
+          // muestro instancias del producto en la clase .producto
           tablaProductos.innerHTML = "";
-          productos.forEach(nuevoProducto => {
+          productos.forEach((nuevoProducto) => {
+            console.log(nuevoProducto);
             tablaProductos.innerHTML += `
-              <div class="col-md-3 Centrado">
-                <div class="Articulos">
-                  <div class="carta">
-                    <figure>
-                      <img src="${nuevoProducto.imagen}" alt="Imagen de producto">
-                    </figure>
-                    <div class="contenido">
-                      <h3>${nuevoProducto.nombre}</h3>
-                      <h6>Disponibles:${nuevoProducto.stock}</h6>
-                      <p>${nuevoProducto.precio}$</p>
-                      <form id="formulario${nuevoProducto.id}">
-                    <input name="cantidad" type="number" value="1" min="1" max="${nuevoProducto.stock}" class="cant">
-                    <button type="submit" class="btn btn-outline-dark">Añadir al carro</button>
-                    <span id="errorCantidad" style="color: red; display: none;"></span>
-                  </form>
+                    <div class="col-md-3 Centrado">
+                      <div class="Articulos">
+                        <div class="carta">
+                          <figure>
+                            <img src="${nuevoProducto.imagen}" alt="Imagen de producto">
+                          </figure>
+                          <div class="contenido">
+                            <h3>${nuevoProducto.nombre}</h3>
+                            <h6>Disponibles:${nuevoProducto.stock}</h6>
+                            <p>${nuevoProducto.precio}$</p>
+                            <form id="formulario${nuevoProducto.id}">
+                          <input name="cantidad" type="number" value="1" min="1" max="${nuevoProducto.stock}" class="cant">
+                          <button type="submit" class="btn btn-outline-dark">Añadir al carro</button>
+                          <span id="errorCantidad" style="color: red; display: none;"></span>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-              `;
-              agregarCarrito(nuevoProducto.id);
-                console.log(nuevoProducto.id);
-              
+                    `;
+          });
+          productos.forEach((nuevoProducto) => {
+            agregarCarrito(nuevoProducto.id);
+            console.log(nuevoProducto.id);
           });
         }
       };
