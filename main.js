@@ -137,41 +137,71 @@ cargarProducto?.addEventListener("submit", (e) => {
   }
 });
 
+// Función para mostrar los productos filtrados según los checkboxes seleccionados
 const mostrarProductos = () => {
   const tablaProductos = document.querySelector(".productos");
+
   if (tablaProductos) {
-    // muestro instancias del producto en la clase .producto
-    tablaProductos.innerHTML = "";
-    productos.forEach((nuevoProducto) => {
-      console.log(nuevoProducto);
-      tablaProductos.innerHTML += `
-                    <div class="col-md-3 Centrado">
-                      <div class="Articulos">
-                        <div class="carta">
-                          <figure>
-                            <img src="${nuevoProducto.imagen}" alt="Imagen de producto">
-                          </figure>
-                          <div class="contenido">
-                            <h3>${nuevoProducto.nombre}</h3>
-                            <h6>Disponibles:${nuevoProducto.stock}</h6>
-                            <p>${nuevoProducto.precio}$</p>
-                            <form id="formulario${nuevoProducto.id}">
-                          <input name="cantidad" type="number" value="1" min="1" max="${nuevoProducto.stock}" class="cant">
-                          <button type="submit" class="btn btn-outline-dark">Añadir al carro</button>
-                          <span id="errorCantidad" style="color: red; display: none;"></span>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                    `;
+    // Filtrar los productos según los checkboxes seleccionados
+    const productosFiltrados = productos.filter((producto) => {
+      if (checkboxBoxers.checked && producto.tipo === "boxers") {
+        return true;
+      }
+      if (checkboxConjuntos.checked && producto.tipo === "conjuntos") {
+        return true;
+      }
+      if (checkboxMedias.checked && producto.tipo === "medias") {
+        return true;
+      }
+      if (checkboxOtros.checked && producto.tipo === "otros") {
+        return true;
+      }
+      return false;
     });
-    productos.forEach((nuevoProducto) => {
-      agregarCarrito(nuevoProducto.id);
-      console.log(nuevoProducto.id);
+
+    tablaProductos.innerHTML = "";
+
+    // Generar el HTML para mostrar los productos filtrados
+    productosFiltrados.forEach((nuevoProducto) => {
+      tablaProductos.innerHTML += `
+        <div class="col-md-3 Centrado">
+          <div class="Articulos">
+            <div class="carta">
+              <figure>
+                <img src="${nuevoProducto.imagen}" alt="Imagen de producto">
+              </figure>
+              <div class="contenido">
+                <h3>${nuevoProducto.nombre}</h3>
+                <h6>Disponibles: ${nuevoProducto.stock}</h6>
+                <p>${nuevoProducto.precio}$</p>
+                <form id="formulario${nuevoProducto.id}">
+                  <input name="cantidad" type="number" value="1" min="1" max="${nuevoProducto.stock}" class="cant">
+                  <button type="submit" class="btn btn-outline-dark">Añadir al carro</button>
+                  <span id="errorCantidad" style="color: red; display: none;"></span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
     });
   }
 };
+
+// Obtener los checkboxes
+const checkboxBoxers = document.querySelector("#boxers");
+const checkboxConjuntos = document.querySelector("#conjuntos");
+const checkboxMedias = document.querySelector("#medias");
+const checkboxOtros = document.querySelector("#otros");
+
+// Agregar event listeners a los checkboxes para actualizar la visualización de los productos
+checkboxBoxers.addEventListener("change", mostrarProductos);
+checkboxConjuntos.addEventListener("change", mostrarProductos);
+checkboxMedias.addEventListener("change", mostrarProductos);
+checkboxOtros.addEventListener("change", mostrarProductos);
+
+// Llamar a mostrarProductos inicialmente para mostrar todos los productos
+mostrarProductos();
 //////////////////////////////////////////////////////////////////////////////////////////////// CARRITO/////////////////////////////////////////////////////////////////////
 const agregarCarrito = (id) => {
   //agregar elementos al carrito
