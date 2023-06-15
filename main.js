@@ -199,9 +199,6 @@ checkboxBoxers.addEventListener("change", mostrarProductos);
 checkboxConjuntos.addEventListener("change", mostrarProductos);
 checkboxMedias.addEventListener("change", mostrarProductos);
 checkboxOtros.addEventListener("change", mostrarProductos);
-
-// Llamar a mostrarProductos inicialmente para mostrar todos los productos
-mostrarProductos();
 //////////////////////////////////////////////////////////////////////////////////////////////// CARRITO/////////////////////////////////////////////////////////////////////
 const agregarCarrito = (id) => {
   //agregar elementos al carrito
