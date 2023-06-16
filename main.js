@@ -5,50 +5,65 @@ class admin {
     this.contraseña = contraseña;
   }
 }
-const admi = new admin("admin", "admin");
-const verificaUsuario = document.querySelector("#card"); //agarro el id card del form
-if (verificaUsuario) {
-  verificaUsuario.addEventListener("submit", (e) => {
-    //cuando mando el formulario guardo los valores en una variable
-    e.preventDefault();
-    const user = e.target.querySelector("#usuario").value;
-    const pass = e.target.querySelector("#contra").value;
-    if (user === admi.usua && pass === admi.contraseña) {
-      //verifico
-      Swal.fire({
-        title: "Procesando...",
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        willOpen: () => {
-          Swal.showLoading();
-        },
-      });
-      // Retrasar 3 segundos para en este caso simular una verificacion
-      setTimeout(() => {
-        Swal.fire({
-          title: "Inicio de sesión exitoso",
-          icon: "success",
-          confirmButtonText: "Aceptar",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.href = "../index.html";
-            localStorage.setItem("isLoggedIn", "true");
-          }
-        });
-      }, 3000);
-    } else {
-      Toastify({
-        text: "Contraseña Incorrecta",
-        gravity: "bottom",
-        position: "right",
-        duration: 3000,
-        style: {
-          background: "red",
-        },
-      }).showToast();
-    }
-  });
+async function verificarUsuario() {
+  const verificaUsuario = document.querySelector("#card"); // Agarro el elemento con el ID "card" del formulario
+  if (verificaUsuario) {
+    verificaUsuario.addEventListener("submit", async (e) => {
+      e.preventDefault(); // Evito que se recargue la página al enviar el formulario
+      const user = e.target.querySelector("#usuario").value; // Obtengo el valor del campo de usuario
+      const pass = e.target.querySelector("#contra").value; // Obtengo el valor del campo de contraseña
+
+      try {
+        const response = await fetch("../admin.json"); // Realizo la solicitud para obtener el archivo JSON
+        if (!response.ok) {
+          throw new Error("Error al cargar el archivo JSON"); // Lanzo un error si hay un problema al cargar el archivo JSON
+        }
+        const data = await response.json(); // Convierto la respuesta en formato JSON
+
+        // Verifico si el usuario y la contraseña coinciden con los valores del archivo JSON
+        if (data.usuario === user && data.contraseña === pass) {
+          // Verificación exitosa
+          Swal.fire({
+            title: "Procesando...",
+            showConfirmButton: false,
+            allowOutsideClick: false,
+            willOpen: () => {
+              Swal.showLoading();
+            },
+          });
+          setTimeout(() => {
+            Swal.fire({
+              title: "Inicio de sesión exitoso",
+              icon: "success",
+              confirmButtonText: "Aceptar",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = "../index.html";
+                localStorage.setItem("isLoggedIn", "true");
+              }
+            });
+          }, 3000);
+        } else {
+          // Contraseña incorrecta
+          Toastify({
+            text: "Contraseña incorrecta",
+            gravity: "bottom",
+            position: "right",
+            duration: 3000,
+            style: {
+              background: "red",
+            },
+          }).showToast();
+        }
+      } catch (error) {
+        console.log("Error:", error);
+      }
+    });
+  }
 }
+
+// Llamo a la función verificarUsuario para activar la verificación del usuario
+verificarUsuario();
 if (localStorage.getItem("isLoggedIn") === "true") {
   // y aca hago desaparecer el boton de login y hago aparecer el panel de admin
   let url = "../Paginas/panel_admin.html";
@@ -136,6 +151,39 @@ cargarProducto?.addEventListener("submit", (e) => {
     reader.readAsDataURL(imagenProducto);
   }
 });
+//////////////////////////////////////////////////////////////////////////////////////////////// CARRITO/////////////////////////////////////////////////////////////////////
+const agregarCarrito = (id) => {
+  //agregar elementos al carrito
+  const formulario = document.getElementById(`formulario${id}`);
+  formulario?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const cantidad = parseInt(e.target.elements.cantidad.value);
+    const productoExistente = carrito.find(
+      (itemCarrito) => itemCarrito.id === id
+    );
+    console.log(productoExistente); //busco si el producto ya existe en el carrito
+    if (productoExistente) {
+      productoExistente.cantidad += cantidad;
+      const producto = productos.find((producto) => producto.id === id);
+      if (productoExistente.cantidad > producto.stock) {
+        // La cantidad excede el stock disponible
+        const errorCantidad = e.target.querySelector("#errorCantidad");
+        errorCantidad.textContent = "Ingrese un valor válido";
+        errorCantidad.style.display = "block";
+        productoExistente.cantidad = 0;
+      }
+    } else {
+      // El producto no existe en el carrito, lo agrego como un nuevo objeto
+
+      carrito.push({
+        id,
+        cantidad,
+      });
+    }
+    console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  });
+};
 
 // Función para mostrar los productos filtrados según los checkboxes seleccionados
 const mostrarProductos = () => {
@@ -185,6 +233,10 @@ const mostrarProductos = () => {
         </div>
       `;
     });
+    productosFiltrados.forEach((nuevoProducto) => {
+      agregarCarrito(nuevoProducto.id);
+      console.log(nuevoProducto.id)
+    })
   }
 };
 
@@ -195,43 +247,14 @@ const checkboxMedias = document.querySelector("#medias");
 const checkboxOtros = document.querySelector("#otros");
 
 // Agregar event listeners a los checkboxes para actualizar la visualización de los productos
-checkboxBoxers.addEventListener("change", mostrarProductos);
-checkboxConjuntos.addEventListener("change", mostrarProductos);
-checkboxMedias.addEventListener("change", mostrarProductos);
-checkboxOtros.addEventListener("change", mostrarProductos);
-//////////////////////////////////////////////////////////////////////////////////////////////// CARRITO/////////////////////////////////////////////////////////////////////
-const agregarCarrito = (id) => {
-  //agregar elementos al carrito
-  const formulario = document.getElementById(`formulario${id}`);
-  formulario?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const cantidad = parseInt(e.target.elements.cantidad.value);
-    const productoExistente = carrito.find(
-      (itemCarrito) => itemCarrito.id === id
-    );
-    console.log(productoExistente); //busco si el producto ya existe en el carrito
-    if (productoExistente) {
-      productoExistente.cantidad += cantidad;
-      const producto = productos.find((producto) => producto.id === id);
-      if (productoExistente.cantidad > producto.stock) {
-        // La cantidad excede el stock disponible
-        const errorCantidad = e.target.querySelector("#errorCantidad");
-        errorCantidad.textContent = "Ingrese un valor válido";
-        errorCantidad.style.display = "block";
-        productoExistente.cantidad = 0;
-      }
-    } else {
-      // El producto no existe en el carrito, lo agrego como un nuevo objeto
+checkboxBoxers?.addEventListener("change", mostrarProductos);
+checkboxConjuntos?.addEventListener("change", mostrarProductos);
+checkboxMedias?.addEventListener("change", mostrarProductos);
+checkboxOtros?.addEventListener("change", mostrarProductos);
 
-      carrito.push({
-        id,
-        cantidad,
-      });
-    }
-    console.log(carrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-  });
-};
+// Llamar a mostrarProductos inicialmente para mostrar todos los productos
+mostrarProductos();
+
 //////////////////////////////////////////////////////////////////////////////////////////////// CARRITO/////////////////////////////////////////////////////////////////////
 let acum = 0;
 carrito.forEach((itemCarrito) => {
