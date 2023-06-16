@@ -172,9 +172,26 @@ const agregarCarrito = (id) => {
         errorCantidad.style.display = "block";
         productoExistente.cantidad = 0;
       }
+      Toastify({
+        text: "Producto añadido al carrito",
+        gravity: "bottom",
+        position: "right",
+        duration: 3000,
+        style: {
+          background: "green",
+        },
+      }).showToast();
     } else {
       // El producto no existe en el carrito, lo agrego como un nuevo objeto
-
+      Toastify({
+        text: "Producto añadido al carrito",
+        gravity: "bottom",
+        position: "right",
+        duration: 3000,
+        style: {
+          background: "green",
+        },
+      }).showToast();
       carrito.push({
         id,
         cantidad,
