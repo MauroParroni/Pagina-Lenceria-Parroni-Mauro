@@ -94,9 +94,22 @@ class Producto {
     this.id = id;
   }
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////// PRODUCTOS/////////////////////////////////////////////////////////////////////
 let carrito = JSON.parse(localStorage.getItem("carrito")) ?? [];
 const productos = JSON.parse(localStorage.getItem("productos")) || []; //verifico si ya hay algo guardado en el localstorage
+if (productos.length < 4) {
+  const producto1 = new Producto("Boxers de algodón", 15, 10, "boxers", "https://http2.mlstatic.com/D_NQ_NP_618103-MLA47359574963_092021-O.webp", 1);
+  const producto2 = new Producto("Conjunto de algodón", 25, 15, "conjuntos", "https://http2.mlstatic.com/D_NQ_NP_847003-MLA43430146528_092020-O.webp", 2);
+  const producto3 = new Producto("Medias estampadas", 12, 20, "medias", "https://www.modapoint.com.ar/38198-large_default/medias-soquete-ninos-juvenil-surtido-liso-pack-x3-talle-4-elemento.jpg", 3);
+  const producto4 = new Producto("Pantuflas", 18, 5, "otros", "https://http2.mlstatic.com/D_NQ_NP_926681-MLA50981632504_082022-O.webp", 4);
+
+  productos.push(producto1);
+  productos.push(producto2);
+  productos.push(producto3);
+  productos.push(producto4);
+  localStorage.setItem("productos", JSON.stringify(productos));
+}
 const cargarProducto = document.querySelector(".panel2");
 cargarProducto?.addEventListener("submit", (e) => {
   //utilizo el ? para verificar si existe cargar producto en el HTML
